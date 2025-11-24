@@ -1,7 +1,13 @@
-import axios from 'axios';
+// frontend/src/api/apiClient.js
+
+import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000'
+  baseURL: "https://blackcofferbackend-dk0q.onrender.com", // 🔗 Your Render backend
+  timeout: 20000, // 20s timeout
+  headers: {
+    "Content-Type": "application/json"
+  }
 });
 
 export default apiClient;
